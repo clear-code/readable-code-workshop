@@ -116,6 +116,48 @@ EclipseからGitを使うのではなく、GitHub for Windowsなど別のツー�
 使う場合はEclipseで編集して別のツールでGitを操作できるか確認してくださ
 い。確認方法は前述の通りです。
 
+EclipseからEGitを使う手順は以下を参考にしてください。
+
+#### Gitリポジトリー作成手順
+
+  1. Javaプロジェクト作成
+    * メニューバー -> File -> New -> Java Project
+  2. プロジェクトを右クリック -> Team -> Share Projectを選択
+  3. Gitを選択
+  4. 「Use or create repository in parent folder of project」にチェック
+  5. Create Repositoryを押してFinish
+
+#### remoteの登録手順
+
+  1. メニューバー -> Window -> Show View -> Other -> Git -> Git Repositoriesを選択
+  2. Git RepositoriesビューのRecipe/Remotesを右クリック
+  3. Create Remote
+  4. remote名（originなど）を入力
+  5. GitHubで作成したリポジトリーのURLを入力
+
+#### commit手順
+
+  1. プロジェクトまたはファイルを右クリック -> Team -> Commitを選択
+  2. コミットするファイルを選択（プロジェクトを右クリックした場合）
+  3. コミットメッセージを入力
+  4. CommitまたはCommit and Pushを押す
+
+#### コミットログ確認手順
+
+  1. Git RepositoriesビューのRecipeを右クリック
+  2. Show In -> Historyを選択
+  3. （右クリックからpushもできます）
+
+#### clone手順
+
+  1. メニューバー -> File -> Importを選択
+  2. Git -> Projects from Gitを選択
+  3. Clone URIを選択
+  4. フォークしたGitHubリポジトリーのURLを入力
+  5. ブランチ（master）を選択
+  6. あとはデフォルトのまま数回Nextを押してFinish
+  7. Git Repositoriesビューにクローンしたリポジトリーが表示されればOK
+
 ### コマンドラインでもビルド・実行できるようにする
 
 勉強会の中で他の人と実装を交換します。実装を交換した人がコマンドライン
@@ -126,3 +168,11 @@ EclipseからGitを使うのではなく、GitHub for Windowsなど別のツー�
 るようにしておいてください。もう少し言うと、 `PATH` と `JAVA_HOME` 環境
 変数を自分の環境にあわせて適切に設定し、 `javac -version` でバージョン
 情報を取得できることを確認してください。
+
+なお、Eclipseで作成されたプロジェクトをコマンドラインでコンパイルする
+場合は、以下の手順を参考にしてください。
+
+```bash
+$ javac -d bin/ src/net/myokoym/recipe/*.java
+$ java -cp bin/ net.myokoym.recipe.Recipe
+```
