@@ -104,6 +104,17 @@
     * 機能は少なくてもまず動くものを
     * 動いてからも継続的に改良・修正
 
+= ソフトウェアの生涯
+
+  # image
+  # src = images/software-life-cycle.svg
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
 = 継続的に改良・修正
 
   * 既存の機能の改良
