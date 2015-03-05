@@ -129,6 +129,17 @@
 リーダブル\n
 コード
 
+= 時間が経つほど効果がでる
+
+  # image
+  # src = images/readable-code-reasonability.svg
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
 = リーダブルコードの必要性（2）
 
 1人だけの開発\n
