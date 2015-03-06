@@ -47,7 +47,10 @@
 
 ### 資料
 
-  * ...
+icebreaker/以下にあるスライドを参照。
+
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/kou/readable-code-workshop-2015-03-06-icebreaker/)
+  * [スライド on SlideShare](http://www.slideshare.net/kou/readable-code-workshop-2015-03-06-icebreaker)
 
 ### やること
 
@@ -78,7 +81,10 @@
 
 ### 資料
 
-  * ...
+introduction/以下にあるスライドを参照。
+
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/kou/readable-code-workshop-2015-03-06-introduction/)
+  * [スライド on SlideShare](http://www.slideshare.net/kou/readable-code-workshop-2015-03-06-introduction)
 
 ## 10：45〜 課題を実装
 
@@ -107,7 +113,10 @@
 
 ### 資料
 
-  * ...
+implementation/以下にあるスライドを参照。
+
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/kou/readable-code-workshop-2015-03-06-implementation/)
+  * [スライド on SlideShare](http://www.slideshare.net/kou/readable-code-workshop-2015-03-06-implementation)
 
 ## 12：15〜 昼食
 
@@ -152,7 +161,10 @@
 
 ### 資料
 
-  * ...
+code-change/以下にあるスライドを参照。
+
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/kou/readable-code-workshop-2015-03-06-code-change/)
+  * [スライド on SlideShare](http://www.slideshare.net/kou/readable-code-workshop-2015-03-06-code-change)
 
 ### やること
 
@@ -186,7 +198,10 @@
 
 ### 資料
 
-  * ...
+retrospective/以下にあるスライドを参照。
+
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/kou/readable-code-workshop-2015-03-06-retrospective/)
+  * [スライド on SlideShare](http://www.slideshare.net/kou/readable-code-workshop-2015-03-06-retrospective)
 
 ### やること
 
@@ -213,7 +228,10 @@
 
 ### 資料
 
-  * ...
+conclusion/以下にあるスライドを参照。
+
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/kou/readable-code-workshop-2015-03-06-conclusion/)
+  * [スライド on SlideShare](http://www.slideshare.net/kou/readable-code-workshop-2015-03-06-conclusion)
 
 ## 16：30〜 質疑応答
 
