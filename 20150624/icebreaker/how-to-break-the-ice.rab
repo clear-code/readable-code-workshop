@@ -1,0 +1,47 @@
+= アイスブレーク
+
+: author
+   須藤功平
+: institution
+   株式会社クリアコード
+: content-source
+   実践リーダブルコード
+: date
+   2015-06-24
+: allotted-time
+   15m
+: theme
+   clear-code
+
+= 目的
+
+いつも通り\n
+コードを書ける\n
+ようになる
+
+= やること1
+
+GitHubにリポジトリーを作る
+
+  名前:
+    ${アカウント名}-readable-code
+  例:
+    kou-readable-code
+
+→ 作ったらチューターに報告
+
+= やること2
+
+  * ((*README.txt*))を作る
+    * 内容：開発言語
+    * 今日使うエディターで書くこと！
+  * commit & push
+  * → pushしたらチューターに報告
+
+= 確認
+
+  * 動作確認できたか
+    * いつものエディターを使えた？
+    * Git/GitHubを使えた？
+  * 声をだせた？
+  * いつも通りコードを書けそう？
