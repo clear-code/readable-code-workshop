@@ -1,6 +1,6 @@
 = 実践リーダブルコードのふりかえり
 
-2015-03-06開催の実践リーダブルコードでのふりかえりの進め方の説明。
+2015-06-24開催の実践リーダブルコードでのふりかえりの進め方の説明。
 
 == ライセンス
 
@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-kou-readable-code-workshop-2015-03-06-retrospective
+  gem install rabbit-slide-kou-readable-code-workshop-2015-06-24-retrospective
 
 === 表示
 
-  rabbit rabbit-slide-kou-readable-code-workshop-2015-03-06-retrospective.gem
+  rabbit rabbit-slide-kou-readable-code-workshop-2015-06-24-retrospective.gem
 

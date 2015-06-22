@@ -1,6 +1,6 @@
 = 実践リーダブルコードのまとめ
 
-2015-03-06開催の実践リーダブルコードのまとめと次のステップの説明。
+2015-06-24開催の実践リーダブルコードのまとめと次のステップの説明。
 
 == ライセンス
 
@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-kou-readable-code-workshop-2015-03-06-conclusion
+  gem install rabbit-slide-kou-readable-code-workshop-2015-06-24-conclusion
 
 === 表示
 
-  rabbit rabbit-slide-kou-readable-code-workshop-2015-03-06-conclusion.gem
+  rabbit rabbit-slide-kou-readable-code-workshop-2015-06-24-conclusion.gem
 
