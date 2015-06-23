@@ -42,8 +42,8 @@
 ## 過去の開催
 
   * 2015年03月06日（金）：[実践リーダブルコード：アジャイルアカデミー](http://event.shoeisha.jp/aa/20150306/)
-  * 2014年7月6日（日）：[SEゼミ - リーダブルコード勉強会（2回目）](http://www.clear-code.com/blog/2014/7/7.html)
-  * 2014年6月22日（日）：[SEゼミ - リーダブルコード勉強会（1回目）](http://www.clear-code.com/blog/2014/6/23.html)
+  * 2014年07月06日（日）：[SEゼミ - リーダブルコード勉強会（2回目）](http://www.clear-code.com/blog/2014/7/7.html)
+  * 2014年06月22日（日）：[SEゼミ - リーダブルコード勉強会（1回目）](http://www.clear-code.com/blog/2014/6/23.html)
 
 ## 問い合わせ先
 
