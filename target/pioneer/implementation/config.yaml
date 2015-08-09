@@ -1,0 +1,22 @@
+---
+id: readable-code-workshop-2015-06-24-implementation
+base_name: how-to-proceed
+tags:
+- rabbit
+- readable-code
+presentation_date: 2015-06-24
+version: 2015.6.24.1
+licenses:
+- CC BY-SA 4.0
+slideshare_id: readable-code-workshop-2015-06-24-implementation
+speaker_deck_id: 
+ustream_id: 
+vimeo_id: 
+youtube_id: 
+author:
+  markup_language: :rd
+  name: Kouhei Sutou
+  email: kou@clear-code.com
+  rubygems_user: kou
+  slideshare_user: kou
+  speaker_deck_user: kou
