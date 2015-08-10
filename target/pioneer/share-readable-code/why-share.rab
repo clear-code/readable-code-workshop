@@ -30,10 +30,30 @@
 
 = ペア→チーム
 
-  * 直接関わっていない部分：増
-  * (('wait'))
-    1人・2人でできていたことを\n
-    どうチームにスケールさせるか
+  * コードの絶対量が増える
+  * 自分以外のコードも増える
+
+(('wait'))
+(('tag:center'))
+↓\n
+読むコストが増える
+
+= 多くて読めない…
+
+  # image
+  # src = images/readable-code-feedback-loop-by-team-but.svg
+  # relative_height = 95
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= ペア→チームの課題
+
+(('tag:center'))
+1人・2人でできていたことを\n
+どうチームにスケールさせるか
 
 (('wait'))
 (('tag:center'))
@@ -48,6 +68,17 @@
 の発見
 
 ((' '))
+
+= リーダブルコードの発見
+
+  # image
+  # src = images/readable-code-feedback-loop-find-readable-code.svg
+  # relative_height = 95
+
+== プロパティー
+
+: enable-title-on-image
+   false
 
 = ポイント
 
