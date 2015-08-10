@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-kou-readable-code-workshop-for-pioneer-retrospective
+  gem install rabbit-slide-kou-readable-code-workshop-for-pioneer-share-readable-code
 
 === 表示
 
-  rabbit rabbit-slide-kou-readable-code-workshop-for-pioneer-retrospective.gem
+  rabbit rabbit-slide-kou-readable-code-workshop-for-pioneer-share-readable-code.gem
 
