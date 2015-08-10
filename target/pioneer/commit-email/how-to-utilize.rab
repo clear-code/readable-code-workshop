@@ -1,0 +1,119 @@
+= コミットメールの\n活かし方
+
+: author
+   須藤功平
+: institution
+   株式会社クリアコード
+: content-source
+   リーダブルコードワークショップ\n
+   （パイオニア向け）
+: date
+   2015-08-11
+: allotted-time
+   10m
+: theme
+   clear-code
+
+= おさらい：今日の体験内容
+
+  * 個人として開発する
+  * ペアとして開発する
+  * ((*チームとして開発する*))
+    * 他メンバーのリーダブルコードを\n
+      見つける
+    * ↑を共有する
+
+= 目的
+
+ペア→チームへ
+
+= チームでループ
+
+  # image
+  # src = images/readable-code-feedback-loop-by-team.svg
+  # relative_height = 95
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= ペア→チーム
+
+読むコストが\n
+増える
+
+= 対策
+
+  * (('wait'))読む量を減らす
+    * 全部読まない
+  * (('wait'))読み方を変える
+    * 詳細に読まない
+  * (('wait'))慣れる
+
+= 読む量を減らす
+
+  * 1人で全部読まなくてよければ…
+    * 見つけた人が\n
+      リーダブルコードを共有
+    * ↑チームで分担して読めばよい
+
+= チームで分担
+
+  # image
+  # src = images/readable-code-feedback-loop-by-team-one-for-all.svg
+  # relative_height = 95
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= 読み方を変える
+
+  * 1コミット当たりの\n
+    読む時間を減らせれば…
+    * 詳細に読まない
+    * 見逃しても構わない
+    * チームの誰かが見つければよい
+    * 次に来たときに見つければよい
+
+= 流し読む
+
+  # image
+  # src = images/readable-code-feedback-loop-by-team-loose.svg
+  # relative_height = 95
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= 慣れる
+
+  * 慣れればコストは下がる
+  * 徐々に慣れればよい
+
+= コードの読み方
+
+  * これまでの方法
+    * チェクアウトして読む
+  * 今から体験する方法
+    * コミットを読む
+
+= コミットを読む方法
+
+  * (('wait'))チェクアウトして(({git log}))
+    * pull型
+  * (('wait'))コミットメール
+    * push型：コミット毎にメールで通知\n
+      (('note:（メールの取得はpullだけど…）'))
+    * push型をオススメ：コストが低い
+
+= やること
+
+  * コミットメールを読む
+    * 制限時間内に読めるだけでよい
+  * よいコミットを見つけたら返信
+    * なぜよいかを書く
+  * 他の人の返信を読む（共有）
