@@ -24,17 +24,16 @@
     * 自分で「これはリーダブル！」\n
       と思うコードをメモ
 
-= 目的
+= リーダブルコードを書く！
 
-(('tag:center'))
-午後の作業の布石\n
-↓
+  # image
+  # src = images/readable-code-feedback-loop-write-readable-code.svg
+  # relative_height = 95
 
-  * 課題の仕様を理解するため
-  * 読まれることを意識して\n
-    書かれたコードを用意するため
-    * リーダブルなコードを書いて！
-  * リーダブルコード発見の練習
+== プロパティー
+
+: enable-title-on-image
+   false
 
 = 困ったら講師に相談
 
