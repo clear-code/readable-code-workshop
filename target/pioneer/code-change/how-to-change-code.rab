@@ -28,6 +28,17 @@
     * ペアのコードを変更する
   * チームとして開発する
 
+= リーダブルコードを発見！
+
+  # image
+  # src = images/readable-code-feedback-loop-find-readable-code.svg
+  # relative_height = 95
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
 = ポイント
 
 (('tag:center'))
