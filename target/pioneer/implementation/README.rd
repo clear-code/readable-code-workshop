@@ -1,6 +1,6 @@
-= 実践リーダブルコード - 課題の実装の進め方
+= リーダブルコードワークショップ（パイオニア向け） - 課題の実装の進め方
 
-2015-06-24開催の実践リーダブルコードで実装する課題の概要と進め方の説明。
+リーダブルコードワークショップ（パイオニア向け）で実装する課題の概要と進め方の説明。
 
 == ライセンス
 
@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-kou-readable-code-workshop-2015-06-24-implementation
+  gem install rabbit-slide-kou-readable-code-workshop-for-pioneer-implementation
 
 === 表示
 
-  rabbit rabbit-slide-kou-readable-code-workshop-2015-06-24-implementation.gem
+  rabbit rabbit-slide-kou-readable-code-workshop-for-pioneer-implementation.gem
 

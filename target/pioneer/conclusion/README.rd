@@ -1,6 +1,6 @@
-= 実践リーダブルコードのまとめ
+= リーダブルコードワークショップ（パイオニア向け）のまとめ
 
-2015-06-24開催の実践リーダブルコードのまとめと次のステップの説明。
+リーダブルコードワークショップ（パイオニア向け）のまとめと次のステップの説明。
 
 == ライセンス
 
@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-kou-readable-code-workshop-2015-06-24-conclusion
+  gem install rabbit-slide-kou-readable-code-workshop-for-pioneer-conclusion
 
 === 表示
 
-  rabbit rabbit-slide-kou-readable-code-workshop-2015-06-24-conclusion.gem
+  rabbit rabbit-slide-kou-readable-code-workshop-for-pioneer-conclusion.gem
 

@@ -1,6 +1,6 @@
-= 実践リーダブルコードのコードチェンジ
+= リーダブルコードワークショップ（パイオニア向け）のコードチェンジ
 
-2015-06-24開催の実践リーダブルコードでのコードチェンジの進め方の説明。
+リーダブルコードワークショップ（パイオニア向け）でのコードチェンジの進め方の説明。
 
 == ライセンス
 
@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-kou-readable-code-workshop-2015-06-24-code-change
+  gem install rabbit-slide-kou-readable-code-workshop-for-pioneer-code-change
 
 === 表示
 
-  rabbit rabbit-slide-kou-readable-code-workshop-2015-06-24-code-change.gem
+  rabbit rabbit-slide-kou-readable-code-workshop-for-pioneer-code-change.gem
 
