@@ -696,9 +696,9 @@
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1237"
-     inkscape:window-height="817"
-     inkscape:window-x="2271"
-     inkscape:window-y="36"
+     inkscape:window-height="704"
+     inkscape:window-x="129"
+     inkscape:window-y="27"
      inkscape:window-maximized="0"
      fit-margin-top="10"
      fit-margin-left="78"
@@ -712,7 +712,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -947,24 +947,24 @@
        style="opacity:1;fill:none;fill-opacity:0.49803922;stroke:#204a87;stroke-width:2.187;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4316)" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#204a87;stroke-width:2.18700004;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 390.8462,317.51642 -214.57989,0 c -2.77,0 -5,2.23 -5,5 l 0,50.9574 c 0,2.77 2.23,5 5,5 l 214.57989,0 c 2.77,0 5,-2.23 5,-5 l 0,-50.9574 c 0,-1.49196 7.00166,-11.79999 5.97186,-12.71457 -0.88214,-0.78344 -9.69382,7.71457 -10.97186,7.71457 z"
+       d="m 132.34186,317.51642 214.57989,0 c 2.77,0 5,2.23 5,5 l 0,50.9574 c 0,2.77 -2.23,5 -5,5 l -214.57989,0 c -2.77,0 -5,-2.23 -5,-5 l 0,-50.9574 c 0,-1.49196 -7.00166,-11.79999 -5.97186,-12.71457 0.88214,-0.78344 9.69382,7.71457 10.97186,7.71457 z"
        id="rect4280"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ssssssssss" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;fill:#204a87;fill-opacity:1;stroke:none;"
-       x="285.06812"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#204a87;fill-opacity:1;stroke:none"
+       x="243.06812"
        y="343.26398"
        id="text4272"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="285.06812"
+         x="243.06812"
          y="343.26398"
          id="tspan4310">お、リーダブルコードだなぁ。</tspan><tspan
          sodipodi:role="line"
-         x="285.06812"
-         y="368.26398"
+         x="243.06812"
+         y="362.01398"
          id="tspan4312">みんな、こんなのあったよ！</tspan></text>
     <path
        inkscape:connector-curvature="0"
@@ -985,12 +985,12 @@
     <text
        sodipodi:linespacing="125%"
        id="text4354"
-       y="331.54074"
-       x="133.4664"
+       y="344.37387"
+       x="93.13369"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#204a87;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         y="331.54074"
-         x="133.4664"
+         y="344.37387"
+         x="93.13369"
          id="tspan4356"
          sodipodi:role="line">読む</tspan></text>
     <g
@@ -1147,16 +1147,16 @@
        sodipodi:linespacing="125%"
        id="text5125"
        y="408.59589"
-       x="415.31372"
+       x="107.31372"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          sodipodi:role="line"
          id="tspan5127"
-         x="415.31372"
+         x="107.31372"
          y="408.59589">リーダブル</tspan><tspan
          sodipodi:role="line"
          id="tspan5129"
-         x="415.31372"
+         x="107.31372"
          y="433.59589">コード</tspan></text>
   </g>
 </svg>
