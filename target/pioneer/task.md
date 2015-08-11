@@ -159,8 +159,8 @@ recipe.sh：
 
    実行例：
 
-       % ./recipe.sh recipe-data.txt
-       オムライス
+        % ./recipe.sh recipe-data.txt
+        オムライス
 
  * 他の人でも、README.txtの内容を読めば、データファイルを作成してプログラムにレシピ情報をロードできること。
 
@@ -201,10 +201,10 @@ recipe.sh：
 
    実行例：
 
-       % ./recipe.sh recipe-data.txt
-       オムライス
-       親子丼
-       杏仁豆腐
+        % ./recipe.sh recipe-data.txt
+        オムライス
+        親子丼
+        杏仁豆腐
 
  * 他の人でも、README.txtを読めば、同様のデータファイルを作成できること。
 
@@ -235,10 +235,10 @@ recipe.sh：
 
    実行例：
 
-       % ./recipe.sh recipe-data.txt
-       1: オムライス
-       2: 親子丼
-       3: 杏仁豆腐
+        % ./recipe.sh recipe-data.txt
+        1: オムライス
+        2: 親子丼
+        3: 杏仁豆腐
 
 ### 仕様6：IDが指定された場合はそのレシピだけ出力できること
 
@@ -267,17 +267,17 @@ IDを指定されなかった場合の挙動は変えないでください。
 
    実行例：
 
-       % ./recipe.sh recipe-data.txt 2
-       2: 親子丼
+        % ./recipe.sh recipe-data.txt 2
+        2: 親子丼
 
  * レシピ情報のIDを伴わずにプログラムが実行されたら、すべてのレシピ情報を出力すること。
 
    実行例：
 
-       % ./recipe.sh recipe-data.txt
-       1: オムライス
-       2: 親子丼
-       3: 杏仁豆腐
+        % ./recipe.sh recipe-data.txt
+        1: オムライス
+        2: 親子丼
+        3: 杏仁豆腐
 
  * 他の人でも、README.txtを読めば、レシピIDを指定できること。
 
@@ -317,10 +317,10 @@ IDを指定されなかった場合の挙動は変えないでください。
 
    実行例（レシピIDの指定無しの場合）：
 
-      % ./recipe.sh recipe-data.txt
-      1: オムライス 卵を焼いてごはんにのせる
-      2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
-      3: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
+        % ./recipe.sh recipe-data.txt
+        1: オムライス 卵を焼いてごはんにのせる
+        2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
+        3: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
 
  * 他の人でも、README.txtを読めば、説明文を関連付けたデータファイルを作成できること。
 
@@ -368,17 +368,17 @@ IDを指定されなかった場合の挙動は変えないでください。
 
    実行例（レシピIDの指定無しの場合）：
 
-       % ./recipe.sh kou recipe-data.txt
-       ユーザー名: kou
-       1: オムライス 卵を焼いてごはんにのせる
-       2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
-       3: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
+        % ./recipe.sh kou recipe-data.txt
+        ユーザー名: kou
+        1: オムライス 卵を焼いてごはんにのせる
+        2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
+        3: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
 
    実行例（レシピIDの指定ありの場合）：
 
-       % ./recipe.sh kou recipe-data.txt 2
-       ユーザー名: kou
-       2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
+        % ./recipe.sh kou recipe-data.txt 2
+        ユーザー名: kou
+        2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
 
  * 他の人でも、README.txtを読めば、レシピ情報にユーザー名を関連付けられること。
 
@@ -437,38 +437,38 @@ IDを指定されなかった場合の挙動は変えないでください。
 
    実行例（レシピIDの指定無しの場合）：
 
-       % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt
-       ユーザー名: kou
-       1: オムライス 卵を焼いてごはんにのせる
-       2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
-       3: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
+        % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt
+        ユーザー名: kou
+        1: オムライス 卵を焼いてごはんにのせる
+        2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
+        3: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
 
-       ユーザー名: piro
-       4: オムライス 卵を焼いてごはんにのせる
-       5: 鶏の唐揚げ 鶏肉にから揚げ粉をまぶして揚げる
-       6: カレー 野菜を切って煮込んでカレー粉を入れる
+        ユーザー名: piro
+        4: オムライス 卵を焼いてごはんにのせる
+        5: 鶏の唐揚げ 鶏肉にから揚げ粉をまぶして揚げる
+        6: カレー 野菜を切って煮込んでカレー粉を入れる
 
-       ユーザー名: okkez
-       7: トマトサラダ トマトと野菜を切ってまぜる
-       8: 生ハムサラダ 生ハムと野菜を切ってまぜる
-       9: 和風サラダ 豆腐と野菜を切ってまぜて醤油ベースのドレッシングをかける
+        ユーザー名: okkez
+        7: トマトサラダ トマトと野菜を切ってまぜる
+        8: 生ハムサラダ 生ハムと野菜を切ってまぜる
+        9: 和風サラダ 豆腐と野菜を切ってまぜて醤油ベースのドレッシングをかける
 
-       ユーザー名: kou
-       10: チョコケーキ 薄力粉とココアと卵とバターをまぜて焼く
-       11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
-       12: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
+        ユーザー名: kou
+        10: チョコケーキ 薄力粉とココアと卵とバターをまぜて焼く
+        11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
+        12: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
 
    実行例（レシピIDの指定ありの場合）：
 
-       % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt 5
-       ユーザー名: kou
+        % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt 5
+        ユーザー名: kou
 
-       ユーザー名: piro
-       5: 鶏の唐揚げ 鶏肉にから揚げ粉をまぶして揚げる
+        ユーザー名: piro
+        5: 鶏の唐揚げ 鶏肉にから揚げ粉をまぶして揚げる
 
-       ユーザー名: okkez
+        ユーザー名: okkez
 
-       ユーザー名: kou
+        ユーザー名: kou
 
  * 他の人でも、README.txtを読めば、各レシピ情報に各ユーザー名を関連付けられること。
 
@@ -499,38 +499,38 @@ IDを指定されなかった場合の挙動は変えないでください。
 
    実行例（レシピIDの指定無しの場合）：
 
-       % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt
-       ユーザー: 1: kou
-       1: オムライス 卵を焼いてごはんにのせる
-       2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
-       3: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
+        % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt
+        ユーザー: 1: kou
+        1: オムライス 卵を焼いてごはんにのせる
+        2: 親子丼 鶏肉を焼いて卵でとじてごはんにのせる
+        3: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
 
-       ユーザー: 2: piro
-       4: オムライス 卵を焼いてごはんにのせる
-       5: 鶏の唐揚げ 鶏肉にから揚げ粉をまぶして揚げる
-       6: カレー 野菜を切って煮込んでカレー粉を入れる
+        ユーザー: 2: piro
+        4: オムライス 卵を焼いてごはんにのせる
+        5: 鶏の唐揚げ 鶏肉にから揚げ粉をまぶして揚げる
+        6: カレー 野菜を切って煮込んでカレー粉を入れる
 
-       ユーザー: 3: okkez
-       7: トマトサラダ トマトと野菜を切ってまぜる
-       8: 生ハムサラダ 生ハムと野菜を切ってまぜる
-       9: 和風サラダ 豆腐と野菜を切ってまぜて醤油ベースのドレッシングをかける
+        ユーザー: 3: okkez
+        7: トマトサラダ トマトと野菜を切ってまぜる
+        8: 生ハムサラダ 生ハムと野菜を切ってまぜる
+        9: 和風サラダ 豆腐と野菜を切ってまぜて醤油ベースのドレッシングをかける
 
-       ユーザー: 4: kou
-       10: チョコケーキ 薄力粉とココアと卵とバターをまぜて焼く
-       11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
-       12: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
+        ユーザー: 4: kou
+        10: チョコケーキ 薄力粉とココアと卵とバターをまぜて焼く
+        11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
+        12: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
 
    実行例（レシピIDの指定ありの場合）：
 
-       % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt 5
-       ユーザー名: kou
+        % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt 5
+        ユーザー名: kou
 
-       ユーザー名: piro
-       5: 鶏の唐揚げ 鶏肉にから揚げ粉をまぶして揚げる
+        ユーザー名: piro
+        5: 鶏の唐揚げ 鶏肉にから揚げ粉をまぶして揚げる
 
-       ユーザー名: okkez
+        ユーザー名: okkez
 
-       ユーザー名: kou
+        ユーザー名: kou
 
 ### 仕様11：ユーザーIDが指定された場合はそのユーザーだけ出力できること
 
@@ -566,29 +566,29 @@ IDを指定されなかった場合の挙動は変えないでください。
 
    実行例（レシピIDの指定無しの場合）：
 
-       % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt 4
-       ユーザー: 4: kou
-       10: チョコケーキ 薄力粉とココアと卵とバターをまぜて焼く
-       11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
-       12: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
+        % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt 4
+        ユーザー: 4: kou
+        10: チョコケーキ 薄力粉とココアと卵とバターをまぜて焼く
+        11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
+        12: 杏仁豆腐 牛乳と砂糖をまぜてゼラチンで固める
 
    実行例（レシピIDの指定ありの場合）：
 
-       % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt 4 11
-       ユーザー: 4: kou
-       11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
+        % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt 4 11
+        ユーザー: 4: kou
+        11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
 
    実行例（レシピIDの指定あり、ユーザーIDの指定無しの場合：ここではユーザーIDに`-1`を指定したら指定無しと扱うものと仮定）：
 
-       % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt -1 11
-       ユーザー: 1: kou
+        % ./recipe.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt -1 11
+        ユーザー: 1: kou
 
-       ユーザー: 2: piro
+        ユーザー: 2: piro
 
-       ユーザー: 3: okkez
+        ユーザー: 3: okkez
 
-       ユーザー: 4: kou
-       11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
+        ユーザー: 4: kou
+        11: スイートポテト 蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
 
  * 他の人でも、README.txtを読めば、ユーザーIDを指定できること。
 
@@ -636,19 +636,19 @@ README.txtに実行方法を追記してください。
 
    実行例（ユーザーID、レシピIDの指定無しの場合）：
 
-       % ./recipe-csv.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt
-       1,kou,1,オムライス,卵を焼いてごはんにのせる
-       1,kou,2,親子丼,鶏肉を焼いて卵でとじてごはんにのせる
-       1,kou,3,杏仁豆腐,牛乳と砂糖をまぜてゼラチンで固める
-       2,piro,4,オムライス,卵を焼いてごはんにのせる
-       2,piro,5,鶏の唐揚げ,鶏肉にから揚げ粉をまぶして揚げる
-       2,piro,6,カレー,野菜を切って煮込んでカレー粉を入れる
-       3,okkez,7,トマトサラダ,トマトと野菜を切ってまぜる
-       3,okkez,8,生ハムサラダ,生ハムと野菜を切ってまぜる
-       3,okkez,9,和風サラダ,豆腐と野菜を切ってまぜて醤油ベースのドレッシングをかける
-       4,kou,10,チョコケーキ,薄力粉とココアと卵とバターをまぜて焼く
-       4,kou,11,スイートポテト,蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
-       4,kou,12,杏仁豆腐,牛乳と砂糖をまぜてゼラチンで固める
+        % ./recipe-csv.sh kou recipe-data1.txt piro recipe-data2.txt okkez recipe-data3.txt kou recipe-data4.txt
+        1,kou,1,オムライス,卵を焼いてごはんにのせる
+        1,kou,2,親子丼,鶏肉を焼いて卵でとじてごはんにのせる
+        1,kou,3,杏仁豆腐,牛乳と砂糖をまぜてゼラチンで固める
+        2,piro,4,オムライス,卵を焼いてごはんにのせる
+        2,piro,5,鶏の唐揚げ,鶏肉にから揚げ粉をまぶして揚げる
+        2,piro,6,カレー,野菜を切って煮込んでカレー粉を入れる
+        3,okkez,7,トマトサラダ,トマトと野菜を切ってまぜる
+        3,okkez,8,生ハムサラダ,生ハムと野菜を切ってまぜる
+        3,okkez,9,和風サラダ,豆腐と野菜を切ってまぜて醤油ベースのドレッシングをかける
+        4,kou,10,チョコケーキ,薄力粉とココアと卵とバターをまぜて焼く
+        4,kou,11,スイートポテト,蒸したさつまいもと砂糖とバターと生クリームをまぜて焼く
+        4,kou,12,杏仁豆腐,牛乳と砂糖をまぜてゼラチンで固める
 
  * 他の人でも、README.txtを読めば、プログラムを実行できること。
 
