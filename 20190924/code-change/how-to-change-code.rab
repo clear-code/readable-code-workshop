@@ -42,6 +42,18 @@
   * 今日のチャレンジ
     * 気をとられない
 
+= リーダブルじゃない例
+
+  # _
+   void open_TermList(TermList *list, char *path) {
+     FILE *fp;
+     /* ファイルを開く */
+     if ((fp = fopen(path , "r")) == NULL){
+       fprintf (stderr, "ファイルが開けません\n");
+       fclose(fp);
+       exit(EXIT_FAILURE);
+
+
 = リーダブルなコード
 
   * 見つけにくい
@@ -50,9 +62,21 @@
   * 今日のチャレンジ
     * 意識して見つけよう！
 
+= リーダブルな例
+
+  # _
+   void open_TermList(TermList *list, char *path) {
+     FILE *fp;
+     /* ファイルを開く */
+     if ((fp = fopen(path , "r")) == NULL) {
+       fprintf (stderr, "ファイルが開けません\n");
+       fclose(fp);
+       exit(EXIT_FAILURE);
+
 = やること
 
-  * 他の人のリポジトリーをfork
+  * チーム内の隣の人の\n
+    リポジトリーをfork
   * どこまで進んでいるかを把握
     * リーダブルコードを探す
   * 開発を継続（改良）
@@ -63,7 +87,7 @@
   * メモに残す
     * forkしたリポジトリーのissueに書く
   * メモの内容
-    * 実際のコードのURL
+    * 実際のコードのURL/コード片
     * リーダブルな理由
     * 見つけたきっかけ
 
@@ -77,6 +101,7 @@
   URL: https://github.com/kou/.../commit/eb02be
 
   コード:
+  ```
    void open_TermList(TermList *list, char *path) {
      FILE *fp;
      /* ファイルを開く */
@@ -84,6 +109,7 @@
        fprintf (stderr, "ファイルが開けません\n");
        fclose(fp);
        exit(EXIT_FAILURE);
+  ```
 
   理由:
   ファイル内で「)」と「{」の間にスペースを空ける、という
@@ -94,6 +120,9 @@
   * 読む人基準
     * 「読む人」が　読みやすいなら\n
       リーダブル
+
+= どんなコードがリーダブルと言えるか？
+
   * 読む人（=自分）基準でよい
     * 自分はどんなコードが\n
       リーダブルだと思うのか\n
