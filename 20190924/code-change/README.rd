@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-piroor-readable-code-workshop-2019-09-24-code-change
+  gem install rabbit-slide-Piro-readable-code-workshop-2019-09-24-code-change
 
 === 表示
 
-  rabbit rabbit-slide-piroor-readable-code-workshop-2019-09-24-code-change.gem
+  rabbit rabbit-slide-Piro-readable-code-workshop-2019-09-24-code-change.gem
 
