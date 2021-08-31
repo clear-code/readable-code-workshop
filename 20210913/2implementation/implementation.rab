@@ -70,8 +70,7 @@
 VS Code ダウンロード
 https://azure.microsoft.com/ja-jp/products/visual-studio-code/
 
-まず、上のURLのページをWebブラウザで開いて、VS 
-Codeをダウンロードし、手元のコンピュータにインストールします。
+まず、上のURLのページをWebブラウザで開いて、VS Codeをダウンロードし、手元のコンピュータにインストールします。
 
 Live Share Extension Packインストール
 https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack
@@ -79,10 +78,8 @@ https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-p
 次に、こちらのURLのページをWebブラウザで開いて「Install」ボタンをクリックします。
 すると、「vscode:」のリンクをVS Codeで開いて良いかどうかを尋ねられます。
 （Webブラウザの種類によって若干操作は変わる可能性があります）
-操作を許可して続行すると、VS 
-Codeが起動し、拡張機能のインストール画面が表示されますので、一番上野「インストール」ボタンをクリックします。
-インストール完了後、VS 
-Codeを終了して、もう一度起動しなおせば、インストールは完了となります。
+操作を許可して続行すると、VS Codeが起動し、拡張機能のインストール画面が表示されますので、一番上野「インストール」ボタンをクリックします。
+インストール完了後、VS Codeを終了して、もう一度起動しなおせば、インストールは完了となります。
 ----
 
 キーボード操作担当の人向けアドバイス：
