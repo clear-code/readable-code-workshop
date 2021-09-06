@@ -108,21 +108,12 @@
     　リーダブルでは？」
     * リーダブル基準の見直しのよい機会
 
-= サポート（1）
+= サポート
 
   * 今日の資料はすべて再利用可能\n
     (('note:https://github.com/clear-code/readable-code-workshop/tree/master/20210913'))\n
     (('note:（ https://slide.rabbit-shocker.org/authors/Piro/ ）'))
     * 迷ったら読み返せる
-
-= サポート（2）
-
-  * コミット読みの支援\n
-    (('note:（ https://www.clear-code.com/blog/2015/3/27.html ）'))
-    * OSSとしてツールを公開
-    * コミット毎にメールで通知(('note:（diff入り）'))
-    * Git、Subversionで使える
-    * GitHub、GitLab連携もできる
 
 = クリアコード
 
