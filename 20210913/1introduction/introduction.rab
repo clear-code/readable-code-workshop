@@ -346,7 +346,7 @@ https://speakerdeck.com/twada/quality-and-speed-2020-autumn-edition
 これは、「こういう手順でこういうことをやろう」という擬似コード。
 「関数名」の所だけ述べてサッと先に進め、ここからは表と擬似コードを並べて説明する。
 
-= 項目の見出し列？
+= 項目の見出し列の……
 
   # image
   # src = images/xlsx-01.png
@@ -361,7 +361,7 @@ https://speakerdeck.com/twada/quality-and-speed-2020-autumn-edition
 
 「項目の見出し列」というのは、この図で赤く囲った部分のこと。
 
-= セルを結合？
+= セルを結合する
 
   # image
   # src = images/xlsx-02.png
@@ -377,7 +377,7 @@ https://speakerdeck.com/twada/quality-and-speed-2020-autumn-edition
 「セルを結合」というのは、この図で赤く囲った部分のこと。
 この図では3行分が結合されている。
 
-= 見出し列の定義の配列？
+= 見出し列の定義の配列
 
   # image
   # src = images/xlsx-03.png
@@ -393,7 +393,7 @@ https://speakerdeck.com/twada/quality-and-speed-2020-autumn-edition
 「見出し列の定義の配列」は、図の右上に示したような物が別途定義されているイメージ。
 この配列の要素がそれぞれB列とC列に対応している。
 
-= 行と列の番号で範囲指定？
+= シートの範囲を指定して結合
 
   # image
   # src = images/xlsx-04.png
@@ -412,7 +412,7 @@ https://speakerdeck.com/twada/quality-and-speed-2020-autumn-edition
 ここまでの話を頭に入れた上で、実際にコードを書いたらどうなるだろうか。
 
 
-= 実際のコードの例
+= 実際のコード
 
     def m(s, n, i):
         if len(i['o']) <= 1:
