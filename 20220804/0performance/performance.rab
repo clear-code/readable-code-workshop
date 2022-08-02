@@ -150,7 +150,7 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
 よくある指数関数的な増加
 
     const COLOR_CODES = [
-      { name: ['r', 'e', 'd',    code: 0xFF0000 },
+      { name: ['r', 'e', 'd'],    code: 0xFF0000 },
       ...
     ];
     let finding = ['r', 'e', 'd'];
