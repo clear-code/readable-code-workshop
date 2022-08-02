@@ -1,0 +1,193 @@
+= プログラムの計算量と実行性能について
+
+: author
+   結城洋志
+: institution
+   株式会社クリアコード
+: content-source
+   リーダブルコード演習
+: date
+   2022-08-04
+: allotted-time
+   90m
+: theme
+   clear-code
+
+= 講師紹介
+
+(('tag:center'))(('tag:margin-bottom * 2'))
+結城洋志（ゆうき ひろし）\n
+aka Piro
+
+  * 株式会社クリアコード所属
+  * FirefoxやThunderbirdの\n
+    法人サポートに従事
+    * トラブルの原因や対策を探るため\n
+      ソースコードを調査することが多い
+
+== ノート
+
+Mozilla FirefoxはWebブラウザー。
+Mozilla Thunderbirdはメールクライアント。
+
+開発元のMozillaは、企業ユーザーからのトラブル問い合わせなどに回答するサービスは提供していない。
+そのため、クリアコードのような事業者が、ある意味で勝手にサポートサービスを行っている。
+
+Firefoxで特定のサービスの動作が遅い、といった問い合わせを受ける
+
+
+= アジェンダ
+
+  * プログラムの実行性能に\n
+    影響する要素について
+  * 計算量について
+  * 実際にやってみる
+
+
+= プログラムは「軽い」「速い」方がいい
+
+= 「軽い」「速い」とは？
+
+* ((*目的が素早く達成される*))\n
+  例：データ変換プログラム
+  * 同じ時間で多くの件数のデータを\n
+    変換できる
+  * データを1件変換する所要時間が短い
+
+= 性能の指標と測定方法
+
+* 他の方の講義で詳しく\n
+  扱われるそうなので\n
+  割愛
+
+= 性能に影響する要素
+
+* 外部要因
+  * 通信待ち
+  * ディスクアクセス待ち\n
+    (('note:など'))
+* 内部要因
+  * ((*計算量*))
+
+= 計算量
+
+実行される処理の\n
+((*回数の大小*))
+
+= 例
+
+「データを10件取得する」
+
+= 1件ずつ取得する
+
+    SELECT * FROM table OFFSET 0 LIMIT 1;
+    SELECT * FROM table OFFSET 1 LIMIT 1;
+    ...                         
+    SELECT * FROM table OFFSET 8 LIMIT 1;
+    SELECT * FROM table OFFSET 9 LIMIT 1;
+
+→処理の実行回数は((*10回*))
+
+= 10件まとめて取得する
+
+    SELECT * FROM table OFFSET 0 LIMIT 10;
+
+→処理の実行回数は((*1回*))
+
+
+= 計算量はアルゴリズムで決まる
+
+* アルゴリズム＝計算(処理)方法
+  * ((*より少ない計算量*))で同じ結果を\n
+    得られる\n
+    ＝より優秀なアルゴリズム
+  * データの件数の増加度合いに対して\n
+    ((*計算量の増加度合いが小さい*))\n
+    ＝より優秀なアルゴリズム
+
+= 計算量の表し方
+
+* Ο記法（オーダー）
+  * O(1)
+  * O(N)
+  * O(N^2)
+  * O(N!)
+  * O(logN)
+
+= O(1)：定数時間
+
+最速
+
+    const COLOR_CODES = {
+      red:    '#FF0000',
+      green:  '#00FF00',
+      blue:   '#0000FF',
+      yellow: '#FFFF00',
+    };
+    let color = COLOR_CODES['red'];
+
+
+= O(N)：線形関数
+
+データ量に正比例
+
+    const COLOR_CODES = [
+      { name: 'red',    code: '#FF0000' },
+      { name: 'green',  code: '#00FF00' },
+      { name: 'blue',   code: '#0000FF' },
+      { name: 'yellow', code: '#FFFF00' },
+    ];
+    let color;
+    for (const item of COLOR_CODES) {
+      if (item.name == 'red') {
+        color = item.code;
+        break;
+      }
+    }
+
+= O(N^2)：二乗時間
+
+よくある指数関数的な増加
+
+    const COLOR_CODES = [
+      { name: 'red',    code: '#FF0000' },
+      ...
+    ];
+    let finding = 'red';
+    let color;
+    colors:
+    for (const item of COLOR_CODES) {
+      for (let i = 0; i < item.name.length; i++) {
+        if (item.name[i] != finding[i]) continue colors;
+        if (i != item.name.length - 1) continue;
+        color = item.code;
+        break colors;
+      }
+    }
+
+= O(N!)：階乗関数
+
+とんでもない勢いで増加
+
+= O(logN)：対数
+
+よくある優秀なアルゴリズム
+（データ量が増えても計算量の増加割合が小さい）
+
+
+
+
+== ノート
+
+
+
+* 計算量の考え方と、よく登場する計算量の例（
+  https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%82%A6%E3%81%AE%E8%A8%98%E5%8F%B7#%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC
+ などで挙がっている物の一部を紹介）
+* 基本的なパフォーマンス改善手法
+  * アルゴリズムの改善
+  * キャッシュの採用とそのデメリット
+  * 非同期化（スレッド）
+  * オーバーヘッドの削減
+    * クエリを1つにまとめて発行回数を減らす、など
+
