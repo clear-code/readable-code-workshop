@@ -119,10 +119,10 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
 最速
 
     const COLOR_CODES = {
-      red:    '#FF0000',
-      green:  '#00FF00',
-      blue:   '#0000FF',
-      yellow: '#FFFF00',
+      red:    0xFF0000,
+      green:  0x00FF00,
+      blue:   0x0000FF,
+      yellow: 0xFFFF00,
     };
     let color = COLOR_CODES['red'];
 
@@ -132,10 +132,10 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
 データ量に正比例
 
     const COLOR_CODES = [
-      { name: 'red',    code: '#FF0000' },
-      { name: 'green',  code: '#00FF00' },
-      { name: 'blue',   code: '#0000FF' },
-      { name: 'yellow', code: '#FFFF00' },
+      { name: 'red',    code: 0xFF0000 },
+      { name: 'green',  code: 0x00FF00 },
+      { name: 'blue',   code: 0x0000FF },
+      { name: 'yellow', code: 0xFFFF00 },
     ];
     let color;
     for (const item of COLOR_CODES) {
@@ -150,10 +150,10 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
 よくある指数関数的な増加
 
     const COLOR_CODES = [
-      { name: 'red',    code: '#FF0000' },
+      { name: ['r', 'e', 'd',    code: 0xFF0000 },
       ...
     ];
-    let finding = 'red';
+    let finding = ['r', 'e', 'd'];
     let color;
     colors:
     for (const item of COLOR_CODES) {
