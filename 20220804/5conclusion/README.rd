@@ -1,6 +1,6 @@
 = 実践リーダブルコードのまとめ
 
-2021-09-14開催のリーダブルコード演習のまとめと次のステップの説明。
+2022-08-05開催のリーダブルコード演習のまとめと次のステップの説明。
 
 == ライセンス
 
@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-piroor-readable-code-workshop-2021-09-14-conclusion
+  gem install rabbit-slide-piroor-readable-code-workshop-2022-08-05-conclusion
 
 === 表示
 
-  rabbit rabbit-slide-piroor-readable-code-workshop-2021-09-14-conclusion.gem
+  rabbit rabbit-slide-piroor-readable-code-workshop-2022-08-05-conclusion.gem
 

@@ -56,7 +56,7 @@
 
 introduction/以下にあるスライドを参照。
 
-  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2021-09-13-introduction/)
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2022-08-04-introduction/)
 
 ## 14:40〜16:05 課題を実装
 
@@ -110,7 +110,7 @@ introduction/以下にあるスライドを参照。
 
 implementation/以下にあるスライドを参照。
 
-  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2021-09-13-implementation/)
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2022-08-04-implementation/)
 
 ## 2日目 13:00〜 前日に参加者が書いたコードをの中から講師がリーダブルコードを紹介
 
@@ -143,7 +143,7 @@ implementation/以下にあるスライドを参照。
 
 code-change/以下にあるスライドを参照。
 
-  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2021-09-14-code-change/)
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2022-08-05-code-change/)
 
 ### やること
 
@@ -176,7 +176,7 @@ code-change/以下にあるスライドを参照。
 
 retrospective/以下にあるスライドを参照。
 
-  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2021-09-14-retrospective/)
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2022-08-05-retrospective/)
 
 ### やること
 
@@ -201,4 +201,4 @@ retrospective/以下にあるスライドを参照。
 
 conclusion/以下にあるスライドを参照。
 
-  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2021-09-14-conclusion/)
+  * [スライド on Rabbit Slide Show](http://slide.rabbit-shocker.org/authors/Piro/readable-code-workshop-2022-08-05-conclusion/)

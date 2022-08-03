@@ -1,6 +1,6 @@
 = リーダブルコード演習のコードチェンジ
 
-2021-09-14開催のリーダブルコード演習でのコードチェンジの進め方の説明。
+2022-08-05開催のリーダブルコード演習でのコードチェンジの進め方の説明。
 
 == ライセンス
 
@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-Piro-readable-code-workshop-2021-09-14-code-change
+  gem install rabbit-slide-Piro-readable-code-workshop-2022-08-05-code-change
 
 === 表示
 
-  rabbit rabbit-slide-Piro-readable-code-workshop-2021-09-14-code-change.gem
+  rabbit rabbit-slide-Piro-readable-code-workshop-2022-08-05-code-change.gem
 

@@ -1,6 +1,6 @@
 = リーダブルコード演習 - 課題の実装の進め方
 
-2021-09-13開催のリーダブルコード演習で実装する課題の概要と進め方の説明。
+2022-08-04開催のリーダブルコード演習で実装する課題の概要と進め方の説明。
 
 == ライセンス
 
@@ -24,9 +24,9 @@ CC BY-SA 4.0
 
 === インストール
 
-  gem install rabbit-slide-kou-readable-code-workshop-2021-09-13-implementation
+  gem install rabbit-slide-kou-readable-code-workshop-2022-08-04-implementation
 
 === 表示
 
-  rabbit rabbit-slide-kou-readable-code-workshop-2021-09-13-implementation.gem
+  rabbit rabbit-slide-kou-readable-code-workshop-2022-08-04-implementation.gem
 
