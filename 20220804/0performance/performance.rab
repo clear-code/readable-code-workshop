@@ -116,27 +116,43 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
 
 = O(1)：定数時間
 
-最速
-
+    // 色の名前とカラーコードのデータ（ハッシュ構造）
     const COLOR_CODES = {
-      red:    0xFF0000,
-      green:  0x00FF00,
       blue:   0x0000FF,
+      green:  0x00FF00,
+      red:    0xFF0000,
       yellow: 0xFFFF00,
     };
+    // 色の名前でカラーコードを特定する
     let color = COLOR_CODES['red'];
+    console.log(color); // => 0xFF0000
 
+== ノート
+
+データ件数にかかわらず一定の速度で結果が出る。
+最速のアルゴリズム。
+
+= O(1)：定数時間
+
+  # image
+  # src = images/graph-O1.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
 
 = O(N)：線形関数
 
-データ量に正比例
-
+    // 色の名前とカラーコードのデータ（配列構造）
     const COLOR_CODES = [
-      { name: 'red',    code: 0xFF0000 },
-      { name: 'green',  code: 0x00FF00 },
       { name: 'blue',   code: 0x0000FF },
+      { name: 'green',  code: 0x00FF00 },
+      { name: 'red',    code: 0xFF0000 },
       { name: 'yellow', code: 0xFFFF00 },
     ];
+    // 色の名前でカラーコードを特定する
     let color;
     for (const item of COLOR_CODES) {
       if (item.name == 'red') {
@@ -144,37 +160,198 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
         break;
       }
     }
+    console.log(color); // => 0xFF0000
+
+== ノート
+
+計算量がデータ件数に正比例する。
+（最悪の場合は全データを1回ずつ処理するため。）
+
+= O(N)：線形関数
+
+  # image
+  # src = images/graph-ON.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
 
 = O(N^2)：二乗時間
 
-よくある指数関数的な増加
-
-    const COLOR_CODES = [
-      { name: ['r', 'e', 'd'],    code: 0xFF0000 },
-      ...
+    // 重複を含む配列
+    const duplicated = [
+      0,1,2,3,2,1,4,3,4,5,6,7,5,6,4,8,9,5,3,2
     ];
-    let finding = ['r', 'e', 'd'];
-    let color;
-    colors:
-    for (const item of COLOR_CODES) {
-      for (let i = 0; i < item.name.length; i++) {
-        if (item.name[i] != finding[i]) continue colors;
-        if (i != item.name.length - 1) continue;
-        color = item.code;
-        break colors;
+    // 重複を取り除いた配列
+    const unique = [];
+    for (const duplicatedElem of duplicated) {
+      let included = false;
+      for (const uniqueElem of unique) {
+        if (uniqueElem == duplicatedElem) {
+          included = true;
+          break;
+        }
       }
+      if (!included)
+        unique.push(duplicatedElem);
     }
+    console.log(unique); // => [0,1,2,3,4,5,6,7,8,9]
 
-= O(N!)：階乗関数
+== ノート
 
-とんでもない勢いで増加
+データ件数の増加に対し、計算量の増加がいわゆる指数関数的な増加を見せる。
+パスワードの総当たりの場合、O(n^文字数)となる。
+
+= O(N^2)：二乗時間
+
+  # image
+  # src = images/graph-ON2.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
 
 = O(logN)：対数
 
-よくある優秀なアルゴリズム
-（データ量が増えても計算量の増加割合が小さい）
+    // 検索対象の配列（ソート済み）
+    const values = [0, 3, 6, 9, 12, 70, 102];
+    // 特定の値が何番目にあるかを二分探索で調べる
+    const target = 12;
+    let index = -1;
+    let minIndex = 0;
+    let maxIndex = values.length - 1;
+    while (minIndex <= maxIndex) {
+      let middleIndex = Math.floor((minIndex + maxIndex) / 2);
+      if (values[middleIndex] == target) {
+          index = middleIndex;
+          break;
+      }
+      else if (values[middleIndex] < target)
+        minIndex = middleIndex + 1;
+      else
+        maxIndex = middleIndex - 1;
+    }
+    console.log(index); // => 4
 
-    二分探索の例
+== ノート
+
+コードは https://tech-blog.s-yoshiki.com/entry/195 の物を加工して掲載した。
+データ件数の増加割合に対して計算量の増加割合が少ない。
+データ件数の増加に対して、計算量の増加が緩やか。
+
+= O(logN)：対数
+
+  # image
+  # src = images/graph-OlogN.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+
+= O(N!)：階乗関数(1/3)
+
+巡回セールスマン問題
+
+    const cities = {
+      tokyo:    { osaka: 2, hokkaido: 3, okinawa: 4,  kagawa: 5   },
+      osaka:    { tokyo: 2, hokkaido: 5, okinawa: 3,  kagawa: 1   },
+      hokkaido: { tokyo: 3, osaka: 5,    okinawa: 7,  kagawa: 6   },
+      okinawa:  { tokyo: 4, osaka: 3,    hokkaido: 7, kagawa: 8   },
+      kagawa:   { tokyo: 5, osaka: 1,    okinawa: 8,  hokkaido: 6 },
+    };
+
+== ノート
+
+各都市と、各都市間の移動に要する時間。
+ここから、移動時間が最短になる巡回ルートを求めたい。
+こういう計算を「巡回セールスマン問題」と呼ぶ。
+
+= O(N!)：階乗関数(2/3)
+
+    function getPermutations(array) {
+      const permutations = [];
+      const nextPermutation = [];
+      function permutate(array) {
+        if (array.length === 0)
+          permutations.push(nextPermutation.slice());
+        for (let i = 0; i < array.length; i++) {
+          array.push(array.shift());
+          nextPermutation.push(array[0]);
+          permutate(array.slice(1));
+          nextPermutation.pop();
+        }
+      }
+      permutate(array);
+      return permutations;
+    }
+
+== ノート
+
+組み合わせを列挙する関数。
+Original version is: get-permutations npm module made by Jan Järfalk
+Licensed: ISC
+https://github.com/janjarfalk/get-permutations
+
+= O(N!)：階乗関数(3/3)
+
+    const results = [];
+    for (const start of Object.keys(cities)) {
+      const patterns = getPermutations(
+        Object.keys(cities).filter(dest => dest != start)
+      );
+      for (const pattern of patterns) {
+        let last;
+        let total = 0;
+        const route = [start, ...pattern, start];
+        for (const current of route) {
+          if (last)
+            total += cities[last][current];
+          last = current;
+        }
+        results.push({ route: route.join('-'), total });
+      }
+    }
+    console.log(results.length);
+    // => 120
+    results.sort((a, b) => a.total - b.total);
+    console.log(results[0]);
+    // => { route: "tokyo-hokkaido-kagawa-osaka-okinawa-tokyo", total: 17 }
+
+== ノート
+
+愚直にやると、データ件数の階乗回の計算が必要になる。
+ここでは、件数5で120回ループが回る。
+
+= O(N!)：階乗関数
+
+  # image
+  # src = images/graph-ONfactorial.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+== ノート
+
+データ件数	計算量
+1	1
+2	2
+3	6
+4	24
+5	120
+6	720
+7	5,040
+8	40,320
 
 
 = アルゴリズムは処理対象のデータ構造に影響される
