@@ -41,7 +41,7 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
   * プログラムの実行性能に\n
     影響する要素について
   * 計算量について
-  * 実際にやってみる
+  * 実際に確かめてみる
 
 
 = プログラムは「軽い」「速い」方がいい
@@ -399,6 +399,8 @@ https://github.com/janjarfalk/get-permutations
   # src = images/graph-ONfactorial.png
   # relative_width = 90
 
+7件で5040回、8件で40320回
+
 == プロパティー
 
 : enable-title-on-image
@@ -478,13 +480,11 @@ https://github.com/janjarfalk/get-permutations
     }
     console.log(unique); // => [0,1,2,3,4,5,6,7,8,9]
 
-= ループの回数を減らす！
+= ループの実行回数を減らす！
 
-* ループしなくてもいいように\n
-  する
-* ループを中断できるときは\n
-  早めに中断する
-* 前回の結果を使い回す\n
+* ループせず済ませるように\n
+  する(('note:（O(1)に寄せる）'))
+* 直近の実行結果を使い回す\n
   （キャッシュ）
 
 = アルゴリズムは色々ある
@@ -506,7 +506,7 @@ https://github.com/janjarfalk/get-permutations
     　　データ件数が少ないと速い\n
     　　(('note:など'))
 
-先達の知見を活かせる
+先達の知見を活かそう
 
 = 　
 
@@ -591,18 +591,10 @@ https://github.com/janjarfalk/get-permutations
 
 この場合、2回以上使うなら割に合う。
 
-= パスワードに対する攻撃
 
-* 総当たり（ブルートフォース）
-* 辞書を使う
-  * レインボーテーブル
+= 計算量を小さくしやすいデータ構造にしよう
 
-== ノート
-
-
-
-= 計算量の小さいアルゴリズムにしやすいデータ構造
-
+* 配列の全走査は基本的に遅い
 * 配列は((*よく検索するキー*))で\n
   ハッシュテーブルにしておく\n
   （インデックス）
@@ -640,9 +632,14 @@ https://github.com/janjarfalk/get-permutations
 
 = 　
 
-= 実際にやってみよう
+= 練習してみよう
 
-
+* https://github.com\n
+  　/clear-code\n
+  　/readable-code-workshop\n
+  　/tree/master/20220804\n
+  　/0performance\n
+  　/try.docx または try.pdf
 
 == ノート
 
