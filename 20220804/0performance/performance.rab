@@ -88,22 +88,82 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
 
 →処理の実行回数は((*10回*))
 
+== ノート
+
+これは「計算量が10」と言える。
+
 = 10件まとめて取得する
 
     SELECT * FROM table OFFSET 0 LIMIT 10;
 
 →処理の実行回数は((*1回*))
 
+== ノート
 
-= 計算量はアルゴリズムで決まる
+これは「計算量が1」と言える。
 
-* アルゴリズム＝計算(処理)方法
+= 計算量は少ない方がいい！
+
+
+= アルゴリズム(1/3)
+
+* 計算量は((*計算方法*))で決まる
+* 計算(処理)方法＝((*アルゴリズム*))
   * ((*より少ない計算量*))で同じ結果を\n
     得られる\n
     ＝より優秀なアルゴリズム
+
+= アルゴリズム(2/3)
+
+* データ件数が増えれば\n
+  計算量も増える(('note:（ことが多い）'))
   * データの件数の増加度合いに対して\n
     ((*計算量の増加度合いが小さい*))\n
     ＝より優秀なアルゴリズム
+
+= こういうのよりは
+
+  # image
+  # src = images/graph-ONfactorial.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= こういうのの方が嬉しい
+
+  # image
+  # src = images/graph-ON2.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= こうだとなお嬉しい
+
+  # image
+  # src = images/graph-O1.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= アルゴリズム(3/3)
+
+* 計算量は、((*実行しなくても*))\n
+  アルゴリズムから見積もれる
+
+== ノート
+
+これはとても大事な性質。
+遅いアルゴリズムは、コードを見ただけで「これは遅い」と分かる。
+1時間で終わると思ったら、実際動かしてみたら1日かかりました、といったことを避けられる。
 
 = 計算量の表し方
 
@@ -117,14 +177,14 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
 = O(1)：定数時間
 
     // 色の名前とカラーコードのデータ（ハッシュ構造）
-    const COLOR_CODES = {
+    const COLOR_CODE_BY_NAME = {
       blue:   0x0000FF,
       green:  0x00FF00,
       red:    0xFF0000,
       yellow: 0xFFFF00,
     };
     // 色の名前でカラーコードを特定する
-    let color = COLOR_CODES['red'];
+    let color = COLOR_CODE_BY_NAME['red'];
     console.log(color); // => 0xFF0000
 
 == ノート
@@ -186,16 +246,16 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
     ];
     // 重複を取り除いた配列
     const unique = [];
-    for (const duplicatedElem of duplicated) {
+    for (const duplicatedItem of duplicated) {
       let included = false;
-      for (const uniqueElem of unique) {
-        if (uniqueElem == duplicatedElem) {
+      for (const uniqueItem of unique) {
+        if (uniqueItem == duplicatedItem) {
           included = true;
           break;
         }
       }
       if (!included)
-        unique.push(duplicatedElem);
+        unique.push(duplicatedItem);
     }
     console.log(unique); // => [0,1,2,3,4,5,6,7,8,9]
 
@@ -260,6 +320,7 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
 
 巡回セールスマン問題
 
+    // ある都市から他の都市までの移動に要する時間のデータ
     const cities = {
       tokyo:    { osaka: 2, hokkaido: 3, okinawa: 4,  kagawa: 5   },
       osaka:    { tokyo: 2, hokkaido: 5, okinawa: 3,  kagawa: 1   },
@@ -276,6 +337,7 @@ Firefoxで特定のサービスの動作が遅い、といった問い合わせ�
 
 = O(N!)：階乗関数(2/3)
 
+    // 配列から順列組み合わせを作る処理
     function getPermutations(array) {
       const permutations = [];
       const nextPermutation = [];
@@ -302,6 +364,7 @@ https://github.com/janjarfalk/get-permutations
 
 = O(N!)：階乗関数(3/3)
 
+    // 総当たりで移動時間を求めて、最短の移動パターンを見つける
     const results = [];
     for (const start of Object.keys(cities)) {
       const patterns = getPermutations(
@@ -353,27 +416,235 @@ https://github.com/janjarfalk/get-permutations
 7	5,040
 8	40,320
 
+= 　
 
-= アルゴリズムは処理対象のデータ構造に影響される
+= 計算量を減らしたい！
 
-* データ構造によっては、\n
-  アルゴリズムでの高速化には限度がある
-  * より高速なアルゴリズムを使えるように、\n
-    データの構造を変えてしまう方が良い場合もある
-    * いわゆる前加工
+== ノート
 
+同じ結果を得られるなら、計算量は小さいに越したことはない。
+
+
+= 計算量
+
+* どういう結果を
+* どういうデータから
+* どのように求めるか
+
+によって、計算量は大きく変わる
+
+= 計算量を減らすには？(1/3)
+
+* 計算方法を変える\n
+  ＝((*アルゴリズムを工夫する*))
+
+= 元のアルゴリズム：O(N^2)
+
+    // 重複を含む配列
+    const duplicated = [
+      0,1,2,3,2,1,4,3,4,5,6,7,5,6,4,8,9,5,3,2
+    ];
+    // 重複を取り除いた配列
+    const unique = [];
+    for (const duplicatedItem of duplicated) {
+      let included = false;
+      for (const uniqueItem of unique) {
+        if (uniqueItem == duplicatedItem) {
+          included = true;
+          break;
+        }
+      }
+      if (!included)
+        unique.push(duplicatedItem);
+    }
+    console.log(unique); // => [0,1,2,3,4,5,6,7,8,9]
+
+
+= アルゴリズムを変えた：O(N)
+
+    // 重複を含む配列
+    const duplicated = [
+      0,1,2,3,2,1,4,3,4,5,6,7,5,6,4,8,9,5,3,2
+    ];
+    // 既に見つかった項目の情報
+    const found = {};
+    // 重複を取り除いた配列
+    const unique = [];
+    for (const item of duplicated) {
+      if (found[item])
+        continue;
+      found[item] = true;
+      unique.push(item);
+    }
+    console.log(unique); // => [0,1,2,3,4,5,6,7,8,9]
+
+= ループの回数を減らす！
+
+* ループしなくてもいいように\n
+  する
+* ループを中断できるときは\n
+  早めに中断する
+* 前回の結果を使い回す\n
+  （キャッシュ）
+
+= アルゴリズムは色々ある
+
+* 例：並べ替え（ソート）
+  * クイックソート：O(NlogN)～O(N^2)
+    * 結果は不安定
+  * バブルソート：O(N^2)
+    * 結果は安定
+  * マージソート：O(NlogN)
+    * 結果は安定
+
+= 色々なアルゴリズムがあることを知っておこう
+
+* アルゴリズムによって\n
+  得手・不得手、\n
+  メリット・デメリットがある。
+  * 例：ある程度揃ったデータだと速い\n
+    　　データ件数が少ないと速い\n
+    　　(('note:など'))
+
+先達の知見を活かせる
+
+= 　
+
+= 計算量を減らすには？(2/3)
+
+* データの構造の方を変える\n
+  ＝((*前加工する*))
+
+= データ構造による制約：O(N)
+
+    // 色の名前とカラーコードのデータ（配列構造）
+    const COLOR_CODES = [
+      { name: 'blue',   code: 0x0000FF },
+      { name: 'green',  code: 0x00FF00 },
+      { name: 'red',    code: 0xFF0000 },
+      { name: 'yellow', code: 0xFFFF00 },
+    ];
+    // 色の名前でカラーコードを特定する
+    let color;
+    for (const item of COLOR_CODES) {
+      if (item.name == 'red') {
+        color = item.code;
+        break;
+      }
+    }
+    console.log(color); // => 0xFF0000
+
+== ノート
+
+配列構造でデータが与えられている場合、どう頑張ってもこれ以上は計算量を減らせない。
+
+= データ構造による制約：O(1)
+
+    // 色の名前とカラーコードのデータ（ハッシュ構造）
+    const COLOR_CODE_BY_NAME = {
+      blue:   0x0000FF,
+      green:  0x00FF00,
+      red:    0xFF0000,
+      yellow: 0xFFFF00,
+    };
+    // 色の名前でカラーコードを特定する
+    let color = COLOR_CODE_BY_NAME['red'];
+    console.log(color); // => 0xFF0000
+
+== ノート
+
+同じ意味のデータでも、構造がハッシュテーブルになっていれば、O(1)でいける。
+
+= データ構造を変える(1/2)
+
+    // 色の名前とカラーコードのデータ（配列構造）
+    const COLOR_CODES = [
+      { name: 'blue',   code: 0x0000FF },
+      { name: 'green',  code: 0x00FF00 },
+      { name: 'red',    code: 0xFF0000 },
+      { name: 'yellow', code: 0xFFFF00 },
+    ];
+              ↓
+    // 色名をキーにしたハッシュ構造
+    const COLOR_CODE_BY_NAME = {
+      blue:   0x0000FF,
+      green:  0x00FF00,
+      red:    0xFF0000,
+      yellow: 0xFFFF00,
+    };
+
+= データ構造を変える(2/2)
+
+    const COLOR_CODES = [
+      { name: 'blue',   code: 0x0000FF },
+      { name: 'green',  code: 0x00FF00 },
+      { name: 'red',    code: 0xFF0000 },
+      { name: 'yellow', code: 0xFFFF00 },
+    ];
+    
+    const COLOR_CODE_BY_NAME = {};
+    for (const item of COLOR_CODES) {
+      COLOR_CODE_BY_NAME[item.name] = item.code;
+    }
+
+== ノート
+
+この場合、2回以上使うなら割に合う。
+
+= パスワードに対する攻撃
+
+* 総当たり（ブルートフォース）
+* 辞書を使う
+  * レインボーテーブル
 
 == ノート
 
 
 
-* 計算量の考え方と、よく登場する計算量の例（
-  https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%82%A6%E3%81%AE%E8%A8%98%E5%8F%B7#%E4%B8%80%E8%88%AC%E7%9A%84%E3%81%AA%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC
- などで挙がっている物の一部を紹介）
-* 基本的なパフォーマンス改善手法
-  * アルゴリズムの改善
-  * キャッシュの採用とそのデメリット
-  * 非同期化（スレッド）
-  * オーバーヘッドの削減
-    * クエリを1つにまとめて発行回数を減らす、など
+= 計算量の小さいアルゴリズムにしやすいデータ構造
+
+* 配列は((*よく検索するキー*))で\n
+  ハッシュテーブルにしておく\n
+  （インデックス）
+* 読み込んだデータはとりあえず\n
+  ハッシュテーブルにしがち
+
+=　
+
+= 計算量を減らすには？(3/3)
+
+「求めたい結果」を変えてしまう
+
+* 厳密な結果でなく\n
+  ((*近似値*))でいいことにする
+* ((*制約条件*))を設ける
+
+= 巡回セールスマン問題
+
+* 各町を1回ずつ訪問したい
+* すべての町を訪問したい
+* なるべく短い時間で済ませたい
+
+時間が最も短く済むのは\n
+どのような巡回ルートか？
+
+
+= 巡回セールスマン問題なら
+
+* 最適解を求めることを諦めて、\n
+  ((*現実的な計算時間の範囲で*))\n
+  ((*ほどほどにいい結果*))を求める
+* 巡回できる町の\n
+  ((*最大数を制限する*))
+
+
+= 　
+
+= 実際にやってみよう
+
+
+
+== ノート
+
+
 
