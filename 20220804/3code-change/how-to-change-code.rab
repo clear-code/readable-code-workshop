@@ -28,7 +28,18 @@
     チーム内で共有する\n
     (('note:（チームのリーダブルコードができる）'))
 
-= おさらい：今日の演習の内容
+= 今の状況のイメージ
+
+  # image
+  # src = images/before-fork.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= 今日の演習の内容
 
   * 他のチームが書いたコードから\n
     ((*リーダブルコードの工夫*))を探す\n
@@ -36,6 +47,39 @@
   * リーダブルの基準を\n
     全体で共有する\n
     (('note:（演習参加者のリーダブルコードをブラッシュアップ）'))
+
+= 今あるコードを……
+
+  # image
+  # src = images/before-fork.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= お互いに「Fork」して交換
+
+  # image
+  # src = images/fork.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= お互いのコードを読む
+
+  # image
+  # src = images/after-fork.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
 
 = ポイント
 
@@ -95,7 +139,6 @@
 
   * 同じ言語の別チームの\n
     リポジトリーをfork
-    * Issuesを有効化する
   * どこまで進んでいるかを把握
     * リーダブルコードを探す
   * 開発を継続（改良）
@@ -105,23 +148,29 @@
 
 どのチームがどのチームとコードを交換するかは、講師側から指示する。
 forkの操作はデモで説明する。
-forkした後は、ページ上部の「Settings」をクリックして、そのままページを下にスクロールし、「Features」欄の「Issues」にチェックを入れる。
-これで、ページ上部に「Issues」が出現する。
+
+forkした後は、ページ上部の「Settings」をクリックして、そのままページを下にスクロールし、「Features」欄の「Issues」にチェックを入れるとissuesを有効化できるのだが、ここで躓くチームが出ると面倒なので、この操作はスキップすることにする。
+
+= まずは「Fork」
+
+  # image
+  # src = images/fork.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
 
 = リーダブルコードを発見！
 
   * メモに残す
-    * forkしたリポジトリーのissueに書く
+    * 自分達の元の作業リポジトリーの\n
+      issueに書く
   * メモの内容
     * 実際のコードのURL/コード片
     * リーダブルと思った理由
     * 見つけたきっかけ
-
-== ノート
-
-元のリポジトリーのIssueの方には書かない。
-元のリポジトリーの方に書いてしまった場合は、forkしたリポジトリーにissueを移動する。
-issueの個別のページを開き、右のサイドバー部分の下の方にある「Transfer issue」をクリックすると、issueの移動先リポジトリーを選択する画面が出るので、ここでforkしたリポジトリーを選択して、「Transfer issue」ボタンをクリックする。
 
 メモの書き方は昨日と同じ。
 
@@ -148,6 +197,17 @@ issueの個別のページを開き、右のサイドバー部分の下の方に
   理由:
   ファイル内で「)」と「{」の間にスペースを空ける、という
   スタイルに統一しているので読みやすくなっている。
+
+= どんどん記録していこう
+
+  # image
+  # src = images/after-fork.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
 
 = リーダブルコードとは
 
