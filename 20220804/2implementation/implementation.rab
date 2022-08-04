@@ -200,6 +200,16 @@ https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-p
 この例では、if文の条件部分の閉じ丸括弧と開き波括弧の間にスペースを追加している。
 その3行前の部分では閉じ丸括弧と開き波括弧の間にスペースが空いていて、そちらに揃えている。
 
+= 作業のイメージ
+
+  # image
+  # src = images/working-style.png
+  # relative_width = 60
+
+== プロパティー
+
+: enable-title-on-image
+   false
 
 = リーダブルコードとは
 
