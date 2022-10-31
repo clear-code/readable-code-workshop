@@ -78,50 +78,200 @@
 (('tag:center'))
 (('note:今日やったのはここまで'))
 
-
-= 基準の育て方の例1
+= コードを読むきっかけを増やす！
 
 (('tag:center'))
-(('note:次のステップ'))
+(('note:次のステップの例'))
 
-  * コミット単位で読む
-    * コード全体ではなく差分を読む
-    * コードの中身・設計の仕方ではなく\n
-      コードの書き方・開発の仕方に注目する
-    * リーダブルなコードを\n
-      見つけるのに使いやすい
+  * ((*スタックトレース*))を\n
+    手がかりに読む
+  * ((*出力されるメッセージ*))を\n
+    手がかりに読む
+  * ((*コミット単位*))で読む
 
-= 基準の育て方の例2
+((' '))
 
-  * コミットの読み方
-    * pull型よりpush型がおすすめ\n
-      (('note:（ https://www.clear-code.com/blog/2015/3/27.html ）'))
-      * 読むコストが下がる
-      * 流し読む（負担が多いと続かない）
-    * 問題探し視点では読まない\n
-      (('note:（必要ならコードレビューを実施）'))
+= 例1：スタックトレース
 
-= 基準の育て方の例3
+  SyntaxError: /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/parser/ext/enscript.rb:120:
+   syntax error, unexpected keyword_end, expecting end-of-input
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/parser/rd/ext/block-verbatim.rb:25:in 
+  `<top (required)>'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/parser/rd/rd2rabbit-lib.rb:9:in `<top 
+  (required)>'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/parser/rd.rb:12:in `<top (required)>'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/utils.rb:30:in `require_safe'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/utils.rb:48:in `block (2 levels) in 
+  require_files_under_directory_in_load_path'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/utils.rb:43:in `glob'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/utils.rb:43:in `block in 
+  require_files_under_directory_in_load_path'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/utils.rb:41:in `each'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/utils.rb:41:in 
+  `require_files_under_directory_in_load_path'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/parser.rb:4:in `<top (required)>'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/canvas.rb:8:in `<top (required)>'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/command/rabbit.rb:48:in `run'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/command/rabbit.rb:29:in `run'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/task/slide.rb:238:in `rabbit'
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/task/slide.rb:100:in `block in define_run_task'
+  /var/lib/gems/2.5.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+  Tasks: TOP => default => run
+  (See full trace by running task with --trace)
+
+= 恐れることはない
+
+  SyntaxError:
+    /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib
+      /rabbit/parser/ext/enscript.rb:120:
+        syntax error, unexpected keyword_end, expecting end-of-input
+  
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib
+    /rabbit/utils.rb:48:
+      in `block (2 levels) in require_files_under_directory_in_load_path'
+  
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib
+    /rabbit/utils.rb:43:in `glob'
+  
+  /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib
+    /rabbit/utils.rb:43:
+      in `block in require_files_under_directory_in_load_path'
+
+どこを見ればいいか書いてあるだけ
+
+= エラーに遭遇した時に深掘りしてみる
+
+  * どういう経緯でエラーに\n
+    なったかが分かる
+  * 回避方法や解決方法が分かる\n
+    (('note:（当てずっぽうで色々試さなくて済む）'))
+  * ((*経緯を辿りやすい*))\n
+    ((*→コードがリーダブルな証拠*))
+
+= 例2：画面に出ているメッセージ
+
+    Firefox のファイルを他のアプリケーションが使用しているため、
+    ブックマークと履歴のシステムが無効化されます。この問題は
+    セキュリティソフトが原因で生じることがあります。
+
+  # image
+  # src = images/error-message.png
+  # relative_width = 90
+
+== プロパティー
+
+: enable-title-on-image
+   false
+
+= ソースコード内を検索する
+
+  https://searchfox.org/l10n
+    /source/ja/browser/chrome/browser/places/places.properties
+  
+  ...
+  # LOCALIZATION NOTE (lockPrompt.text)
+  # %S will be replaced with the application name.
+  lockPrompt.text   =%S のファイルを他のアプリケーションが
+                     使用しているため、...
+  ...
+
+= 変数名や関数名などを辿っていく
+
+  https://searchfox.org/mozilla-central
+    /source/browser/components/BrowserGlue.jsm
+  
+  /**
+   * Show the notificationBox for a locked places database.
+   */
+  _showPlacesLockedNotificationBox:
+      function BG__showPlacesLockedNotificationBox() {
+    ...
+    var text = placesBundle.formatStringFromName("lockPrompt.text", [
+      applicationName,
+    ]);
+    ...
+
+= 目に見えるものを手がかりに深掘りしてみる
+
+  * どういう経緯で表示\n
+    されているかが分かる
+  * 回避方法や解決方法が分かる\n
+    (('note:（当てずっぽうで色々試さなくて済む）'))
+  * ((*経緯を辿りやすい*))\n
+    ((*→コードがリーダブルな証拠*))
+
+
+= 例3：コミット単位で読む
+
+  commit 4d516212f14ddcf04a8ead386104dab1d37ab8f4
+  Author: YUKI "Piro" Hiroshi <piro.outsider.reflex@gmail.com>
+  Date:   Tue Oct 4 14:12:49 2022 +0900
+  
+      Support backquote
+  
+  diff --git a/common/placeholder-parser.js b/common/placeholder-parser.js
+  index fe6d4df..d9c82ee 100644
+  --- a/common/placeholder-parser.js
+  +++ b/common/placeholder-parser.js
+  @@ -31,14 +32,17 @@ export function process(input, processor, processedInput...
+  
+       if (escaped) {
+         if ((inDoubleQuoteString && character == '"') ||
+  -          (inSingleQuoteString && character == "'")) {
+  +          (inSingleQuoteString && character == "'") ||
+  +          (inBackQuoteString && character == '`')) {
+           if (inArgsPart)
+             rawArgs += '\\';
+         }
+
+= コミットの読み方
+
+  * コード全体ではなく差分を読む
+  * コードの中身・設計の仕方ではなく\n
+    コードの書き方・開発の仕方に注目する
+  * ((*文脈なしでも読みやすい*))\n
+    ((*→コードがリーダブルな証拠*))
+
+= コミット単位で読む負担を減らす
+
+  * pull型よりpush型にする\n
+    (('note:（メール、チャットへの自動投稿など）'))
+    * 読むのに取りかかるコストが下がる
+    * 流し読む（負担が多いと続かない）
+  * 問題探し視点では読まない\n
+    (('note:（必要ならコードレビューを実施）'))
+
+= コードを読むと気付きが増える
+
+  * 「詰まらずに読めるなあ」
+  * 「詳しくは分からないけど\n
+    　流れを追いやすいなあ」
+  * 「コミットの差分から\n
+    　趣旨を読み取りやすいなあ」
+  * ((*→コードやコミットが*))\n
+    　((*リーダブルな証拠*))
+
+= 共有の仕方の例
 
   * リーダブルコードの共有方法
     * Wikiに書く（全チームで有効）
     * コードで伝える（上級チーム向け）
 
-= 基準の育て方の例4
+= Wikiに書いて共有する
 
-  * Wikiに書いて共有する
-    * Wikiもdiffを通知できるようにする\n
-      (('note:（RedmineとGitHub用はツールあり）'))
-    * 後で参照できるため
-    * 更新もできるため\n
-      (('note:（リーダブルコードの基準は変わることもある！）'))
+  * Wikiもdiffを通知するように\n
+    するとなお良い\n
+    (('note:（RedmineとGitHub用はツールあり）'))
+  * 後で参照できる
+  * 更新もできる\n
+    (('note:（リーダブルコードの基準は変わることもある！）'))
 
-= 基準の育て方の例5
+= 実際のコードで共有する
 
-  * 実際のコードで共有する
-    * 上級チーム向け\n
-      (('note:（チームにコードを読む文化が根付いた後）'))
-    * リーダブルコードを真似てコミット
+  * 上級チーム向け\n
+    (('note:（チームにコードを読む文化が根付いた後）'))
+  * リーダブルコードを\n
+    真似てコミット
     * →他の人：「またこの書き方だ」
     * →真似する人増加→チームが合意
     * →チームが合意→Wikiにまとめる
@@ -137,11 +287,12 @@
 
 (('tag:center'))
 開発を通じて↓を共有できる\n
-(('note:（ただし、上級チームになってから）'))
 
   * チームが大事にしていること
     * チームのリーダブル基準
     * チームの開発スタイル
+
+(('note:（ただし、上級チームになっていればだが。）'))
 
 = 新人のスムーズな受け入れに有用
 
@@ -179,12 +330,12 @@
 
 = 読みにくいコードに打ち克つ！
 
-  * × 読むコストが\n
-    　　もったいないから\n
+  * × 読むコストが勿体ないから\n
     　　読むのをやめる
-  * × 読みにくいと指摘する
-  * ○ 読みやすくなるように\n
-    　　コードをリーダブルにする
+  * △ 「読みにくい」と指摘する
+  * ○ 読みやすいコードにしていく
+  * ○ 読みやすくする知見を\n
+    　　共有していく
 
 
 = サポート
