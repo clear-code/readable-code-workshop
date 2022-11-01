@@ -83,15 +83,75 @@
 (('tag:center'))
 (('note:次のステップの例'))
 
+  * ((*コミット単位*))で読む
   * ((*スタックトレース*))を\n
     手がかりに読む
   * ((*出力されるメッセージ*))を\n
     手がかりに読む
-  * ((*コミット単位*))で読む
 
 ((' '))
 
-= 例1：スタックトレース
+
+= 例1：コミット単位で読む
+
+  commit 4d516212f14ddcf04a8ead386104dab1d37ab8f4
+  Author: YUKI "Piro" Hiroshi <piro.outsider.reflex@gmail.com>
+  Date:   Tue Oct 4 14:12:49 2022 +0900
+  
+      Support backquote
+  
+  diff --git a/common/placeholder-parser.js b/common/placeholder-parser.js
+  index fe6d4df..d9c82ee 100644
+  --- a/common/placeholder-parser.js
+  +++ b/common/placeholder-parser.js
+  @@ -31,14 +32,17 @@ export function process(input, processor, processedInput...
+  
+       if (escaped) {
+         if ((inDoubleQuoteString && character == '"') ||
+  -          (inSingleQuoteString && character == "'")) {
+  +          (inSingleQuoteString && character == "'") ||
+  +          (inBackQuoteString && character == '`')) {
+           if (inArgsPart)
+             rawArgs += '\\';
+         }
+
+= コミットの読み方
+
+  * コード全体ではなく差分を読む
+  * コードの中身・設計の仕方ではなく\n
+    コードの書き方・開発の仕方に注目する
+  * ((*文脈なしでも読みやすい*))\n
+    ((*→コードがリーダブルな証拠*))
+
+= コミット単位で読む負担を減らす
+
+  * pull型よりpush型にする\n
+    (('note:（メール、チャットへの自動投稿など）'))
+    * 読むのに取りかかるコストが下がる
+    * 流し読む（負担が多いと続かない）
+  * 問題探し視点では読まない\n
+    (('note:（必要ならコードレビューを実施）'))
+
+= コードを読むと気付きが増える
+
+  * 「詰まらずに読めるなあ」
+  * 「詳しくは分からないけど\n
+    　流れを追いやすいなあ」
+  * 「コミットの差分から\n
+    　趣旨を読み取りやすいなあ」
+  * ((*→コードやコミットが*))\n
+    　((*リーダブルな証拠*))
+
+= コミット単位で読むのが難しい場合
+
+* 文脈がないと読むのが辛い
+* 知らない言語、\n
+  知らないプロジェクトだと\n
+  目が滑る
+
+→文脈を伴った読み方をしてみる
+
+= 例2：スタックトレース
 
   SyntaxError: /var/lib/gems/2.5.0/gems/rabbit-2.2.1/lib/rabbit/parser/ext/enscript.rb:120:
    syntax error, unexpected keyword_end, expecting end-of-input
@@ -148,7 +208,7 @@
   * ((*経緯を辿りやすい*))\n
     ((*→コードがリーダブルな証拠*))
 
-= 例2：画面に出ているメッセージ
+= 例3：画面に出ているメッセージ
 
     Firefox のファイルを他のアプリケーションが使用しているため、
     ブックマークと履歴のシステムが無効化されます。この問題は
@@ -201,55 +261,17 @@
     ((*→コードがリーダブルな証拠*))
 
 
-= 例3：コミット単位で読む
+= OSSのコードを読んで学ぶ
 
-  commit 4d516212f14ddcf04a8ead386104dab1d37ab8f4
-  Author: YUKI "Piro" Hiroshi <piro.outsider.reflex@gmail.com>
-  Date:   Tue Oct 4 14:12:49 2022 +0900
-  
-      Support backquote
-  
-  diff --git a/common/placeholder-parser.js b/common/placeholder-parser.js
-  index fe6d4df..d9c82ee 100644
-  --- a/common/placeholder-parser.js
-  +++ b/common/placeholder-parser.js
-  @@ -31,14 +32,17 @@ export function process(input, processor, processedInput...
-  
-       if (escaped) {
-         if ((inDoubleQuoteString && character == '"') ||
-  -          (inSingleQuoteString && character == "'")) {
-  +          (inSingleQuoteString && character == "'") ||
-  +          (inBackQuoteString && character == '`')) {
-           if (inArgsPart)
-             rawArgs += '\\';
-         }
+  * OSSのコードは\n
+    リーダブルになるように\n
+    気をつけて書かれることが多い
+    * × すごい技術力があるから\n
+      　　リーダブルに書けている
+    * ○ 並の技術力なので\n
+      　　リーダブルにしないと\n
+      　　やってられない
 
-= コミットの読み方
-
-  * コード全体ではなく差分を読む
-  * コードの中身・設計の仕方ではなく\n
-    コードの書き方・開発の仕方に注目する
-  * ((*文脈なしでも読みやすい*))\n
-    ((*→コードがリーダブルな証拠*))
-
-= コミット単位で読む負担を減らす
-
-  * pull型よりpush型にする\n
-    (('note:（メール、チャットへの自動投稿など）'))
-    * 読むのに取りかかるコストが下がる
-    * 流し読む（負担が多いと続かない）
-  * 問題探し視点では読まない\n
-    (('note:（必要ならコードレビューを実施）'))
-
-= コードを読むと気付きが増える
-
-  * 「詰まらずに読めるなあ」
-  * 「詳しくは分からないけど\n
-    　流れを追いやすいなあ」
-  * 「コミットの差分から\n
-    　趣旨を読み取りやすいなあ」
-  * ((*→コードやコミットが*))\n
-    　((*リーダブルな証拠*))
 
 = 共有の仕方の例
 
